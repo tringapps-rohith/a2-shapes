@@ -98,8 +98,11 @@ class Shapes
                                        System.out.print("\nArea of Circle :"+c.area());
                                        System.out.print("\nPerimeter of Circle :"+c.perimeter());
                                 break;
-                                case 3:double a,br,c1,h;
-                                       System.out.print("\nEnter height and breadth\n");
+                                case 3:double a;
+                                        double br;
+                                       double c1;
+                                        double h;
+                                        System.out.print("\nEnter height and breadth\n");
                                        h=sin.nextDouble();
                                        br=sin.nextDouble();
                                        System.out.print("\nEnter side a and c\n");

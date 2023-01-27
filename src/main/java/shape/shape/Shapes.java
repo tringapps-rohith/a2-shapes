@@ -83,7 +83,8 @@ class Shapes
                         ch=sin.nextInt();
                         switch(ch)
                         {
-                                case 1:double l,b;
+                                case 1:double l;
+                                        double b;
                                        System.out.print("Enter length and breadth\n");
                                        l=sin.nextDouble();
                                        b=sin.nextDouble();

@@ -5,6 +5,7 @@ package shape.shape;
  *
  */
 import java.util.*;
+import java.util.logging.Logger;
 interface Shape
 {
         double perimeter();
@@ -76,46 +77,47 @@ class Shapes
         {
                 int ch=5;
                 Scanner sin=new Scanner(System.in);
+				Logger l=Logger.getLogger("com.api.jar");
                 do
                 {
-                        System.out.print("\n1.Rectangle\n2.Circle\n3.Triangle\n4.Exit\n");
-                        System.out.print("Enter your choice\n");
+                        l.info("\n1.Rectangle\n2.Circle\n3.Triangle\n4.Exit\n");
+                        l.info("Enter your choice\n");
                         ch=sin.nextInt();
                         switch(ch)
                         {
                                 case 1:double l;
                                         double b;
-                                       System.out.print("Enter length and breadth\n");
+                                       l.info("Enter length and breadth\n");
                                        l=sin.nextDouble();
                                        b=sin.nextDouble();
                                        Rectangle r=new Rectangle(l,b);
-                                       System.out.print("\nArea of Rectangle :"+r.area());
-                                       System.out.print("\nPerimeter of Rectangle :"+r.perimeter());
+                                       l.log(LEVEL.INFO,()-> "\nArea of Rectangle :"+r.area());
+                                       l.log(LEVEL.INFO,()-> "\nPerimeter of Rectangle :"+r.perimeter());
                                 break;
                                 case 2:double ra;
-                                       System.out.print("Enter radius\n");
+                                       l.info("Enter radius\n");
                                        ra=sin.nextDouble();
                                        Circle c=new Circle(ra);
-                                       System.out.print("\nArea of Circle :"+c.area());
-                                       System.out.print("\nPerimeter of Circle :"+c.perimeter());
+                                       l.log(LEVEL.INFO,()-> "\nArea of Circle :"+c.area());
+                                       l.log(LEVEL.INFO,()-> "\nPerimeter of Circle :"+c.perimeter());
                                 break;
                                 case 3:double a;
                                         double br;
                                        double c1;
                                         double h;
-                                        System.out.print("\nEnter height and breadth\n");
+                                        l.info("\nEnter height and breadth\n");
                                        h=sin.nextDouble();
                                        br=sin.nextDouble();
-                                       System.out.print("\nEnter side a and c\n");
+                                       l.info("\nEnter side a and c\n");
                                        a=sin.nextDouble();
                                        c1=sin.nextDouble();
                                        Triangle t=new Triangle(a,br,c1,h);
-                                       System.out.print("\nArea of Triangle :"+t.area());
-                                       System.out.print("\nPerimeter of Traingle :"+t.perimeter());
+                                       l.log(LEVEL.INFO,()-> "\nArea of Triangle :"+t.area());
+                                       l.log(LEVEL.INFO,()-> "\nPerimeter of Traingle :"+t.perimeter());
                                 break;
                                 default:if(ch!=4)
                                         {
-                                                System.out.print("Enter valid input\n");
+                                                l.info("Enter valid input\n");
                                         }
                                         break;
                         }

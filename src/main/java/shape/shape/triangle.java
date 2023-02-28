@@ -1,3 +1,4 @@
+package shape.shape;
 class Triangle implements Shape
 {
         private double a;

@@ -1,3 +1,4 @@
+package shape.shape;
 class Rectangle implements Shape
 {
         private double length;
